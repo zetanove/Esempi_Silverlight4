@@ -1,0 +1,24 @@
+﻿<UserControl xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"  x:Class="DataBinding.DataFormsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:my="clr-namespace:DataBinding"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="500" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+    <UserControl.Resources>
+        <my:Persona x:Key="persona"></my:Persona>
+    </UserControl.Resources>
+    <Grid Width="500" x:Name="LayoutRoot" Background="White" Loaded="LayoutRoot_Loaded" BindingValidationError="LayoutRoot_BindingValidationError">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Column="0">
+            <CheckBox Content="AutoCommit" IsChecked="{Binding AutoCommit, ElementName=dataForm, Mode=TwoWay}" Margin="4"/>
+            <CheckBox Content="AutoEdit" IsChecked="{Binding AutoEdit, ElementName=dataForm, Mode=TwoWay}" Margin="4"/>
+        </StackPanel>
+
+        <toolkit:DataForm Name="dataForm" ItemsSource="{Binding NotifyOnValidationError=False, ValidatesOnExceptions=False}" CurrentItem="{StaticResource persona}" LabelPosition="Auto" AutoCommit="False" AutoEdit="False" AutoGenerateFields="True" CommitButtonContent="Salva" CancelButtonContent="Annulla" CommandButtonsVisibility="All" Grid.Row="1" />
+    </Grid>
+</UserControl>

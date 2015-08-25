@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Resources.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+        <LinearGradientBrush x:Key="gradientRedBlack" StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#FFFF0000" />
+            <GradientStop Color="#FF000000" Offset="1" />
+        </LinearGradientBrush>
+    </UserControl.Resources>
+    
+    <Canvas>
+        <StackPanel>
+            <StackPanel.Resources>
+                
+            </StackPanel.Resources>
+        </StackPanel>
+        <Rectangle Width="100" Height="100" Canvas.Left="33" Canvas.Top="26" Fill="{StaticResource gradientRedBlack}"></Rectangle>
+    </Canvas>
+
+    
+</UserControl>

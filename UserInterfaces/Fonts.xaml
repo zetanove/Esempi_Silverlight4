@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="UserInterfaces.Fonts"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400" FontSize="16">
+    
+    <StackPanel x:Name="LayoutRoot" Background="White" Margin="10" HorizontalAlignment="Center">
+        <TextBlock FontFamily="Arial">Arial</TextBlock>
+        <TextBlock FontFamily="Arial Black">Arial Black</TextBlock>
+        <TextBlock FontFamily="Comic Sans MS">Comic Sans MS</TextBlock>
+        <TextBlock FontFamily="Courier New">Courier New</TextBlock>
+        <TextBlock FontFamily="Georgia">Georgia</TextBlock>
+        <TextBlock FontFamily="Lucida Sans Unicode">Lucida Sans Unicode</TextBlock>
+        <TextBlock FontFamily="Portable User Interface">Portable User Interface</TextBlock>
+        <TextBlock FontFamily="Times New Roman">Times New Roman</TextBlock>
+        <TextBlock FontFamily="Trebuchet MS">Trebuchet MS</TextBlock>
+        <TextBlock FontFamily="Verdana">Verdana</TextBlock>
+        <TextBlock FontFamily="Webdings">Webdings</TextBlock>
+        <TextBlock FontFamily="JokermanFont.ttf#Jokerman" >Jokerman</TextBlock>
+    </StackPanel>
+</UserControl>

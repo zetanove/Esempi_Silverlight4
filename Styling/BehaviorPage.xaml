@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Styling.BehaviorPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
+             xmlns:myaction="clr-namespace:Styling"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Button Content="Play sound" Height="23" HorizontalAlignment="Left" Margin="30,5,0,0" Name="button1" VerticalAlignment="Top" Width="75">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Click">
+                    <ei:PlaySoundAction Source="tada.wma"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Button>
+        <Button Content="Flip" Height="23" HorizontalAlignment="Left" Margin="30,10,0,0" Name="button2" VerticalAlignment="Top" Width="75" Grid.Row="1">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="Click">
+                    <myaction:FlipControlAction FrontElementName="Front" BackElementName="Rear" Duration="0:0:2" ></myaction:FlipControlAction>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+        </Button>
+        
+        <Image Height="200" Stretch="Uniform" Grid.Row="2" Name="Front" Source="/Styling;component/Images/carta%20fronte.jpg" Visibility="Visible" Grid.RowSpan="1"></Image>
+        <Image Height="200" Stretch="Uniform" Grid.Row="2" Name="Rear" Source="/Styling;component/Images/carta%20retro.jpg" Visibility="Collapsed" Grid.RowSpan="1"></Image>
+    </Grid>
+</UserControl>

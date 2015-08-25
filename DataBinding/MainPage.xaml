@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="DataBinding.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="600" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+
+    <Grid Width="564">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70" />
+            <RowDefinition Height="230*" />
+        </Grid.RowDefinitions>
+        <toolkit:WrapPanel Orientation="Horizontal" Margin="0,0,0,224" Grid.RowSpan="2">
+            <Button x:Name="btDataBinding1" Margin="2" Click="btDataBinding1_Click">simple Data binding</Button>
+            <Button x:Name="btObjectDataBinding" Margin="2" Click="btObjectDataBinding_Click">xaml data binding</Button>
+            <Button x:Name="btcodeBehindDataBinding" Margin="2" Click="btcodeBehindDataBinding_Click">code behind data binding</Button>
+            <Button x:Name="btCollectionBinding" Margin="2" Click="btCollectionBinding_Click">collection binding</Button>
+            <Button x:Name="btFormatConversion" Margin="2" Click="btFormatConversion_Click">format/conversion</Button>
+            <Button x:Name="btValidation" Margin="2" Click="btValidation_Click">validation</Button>
+            <Button x:Name="btLabels" Margin="2" Click="btLabels_Click">labels</Button>
+            <Button x:Name="btDataForms" Margin="2" Click="btDataForms_Click">Data Forms</Button>
+            <Button x:Name="btDataGrid" Margin="2" Click="btDataGrid_Click">DataGrid</Button>
+            <Button x:Name="btTree" Margin="2" Click="btTree_Click">TreeView</Button>
+            <Button x:Name="btTreeDataBound" Margin="2" Click="btTreeDataBound_Click">Databound TreeView</Button>
+            <Button x:Name="btAspnetWebService" Margin="2" Click="btAspnetWebService_Click">ASP.NET Web service</Button>
+        </toolkit:WrapPanel>
+        <Grid Margin="10" Name="theContainer" Grid.Row="1"></Grid>
+    </Grid>
+</UserControl>

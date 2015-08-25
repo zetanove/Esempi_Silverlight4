@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="Animations.DoubleAnimPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="500" d:DesignWidth="400">
+    <UserControl.Resources>
+        <Storyboard x:Name="sb">
+            <DoubleAnimation Storyboard.TargetName="rect2" Storyboard.TargetProperty="(Canvas.Left)" BeginTime="0:0:0" Duration="0:0:1"
+                             From="10" To="300" AutoReverse="False" ></DoubleAnimation>
+        </Storyboard>
+
+        <Storyboard x:Name="sb3"  Duration="0:0:2" Storyboard.TargetName="rect3" AutoReverse="True">
+            <DoubleAnimation Storyboard.TargetProperty="Width" 
+                             BeginTime="0:0:0" Duration="0:0:1"
+                             From="50" To="100"  ></DoubleAnimation>
+            <DoubleAnimation Storyboard.TargetProperty="Height" 
+                             BeginTime="0:0:1" Duration="0:0:1"
+                             From="50" To="80"  ></DoubleAnimation>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UserControl.Loaded">
+            <BeginStoryboard>
+                <Storyboard x:Name="sb2">
+                    <DoubleAnimation Storyboard.TargetName="rect" Storyboard.TargetProperty="Width"
+                                     From="0" To="200" Duration="0:0:2" RepeatBehavior="2x" AutoReverse="True">
+                    </DoubleAnimation>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </UserControl.Triggers>
+    <Canvas x:Name="LayoutRoot" Background="White" Width="400" Height="500">
+        <Rectangle x:Name="rect" Width="50" Height="50" Fill="Red" Canvas.Left="20" Canvas.Top="10"></Rectangle>
+        <Rectangle Canvas.Left="20" Canvas.Top="102" Fill="Red" Height="50" Name="rect2" Width="50" MouseLeftButtonDown="rect2_MouseLeftButtonDown"  />
+        <TextBlock Canvas.Left="20" Canvas.Top="158">clicca sul rettangolo per avviare l'animazione</TextBlock>
+        <Rectangle Canvas.Left="156" Canvas.Top="192" Fill="Red" Height="50" Name="rect3" Width="50" MouseLeftButtonDown="rect3_MouseLeftButtonDown" />
+        <TextBlock Canvas.Left="42" Canvas.Top="261">clicca sul rettangolo per avviare l'animazione</TextBlock>
+    </Canvas>
+</UserControl>

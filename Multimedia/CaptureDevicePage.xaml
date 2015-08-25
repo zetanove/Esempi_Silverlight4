@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Multimedia.CaptureDevicePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="400" d:DesignWidth="400" >
+    
+    <Grid x:Name="LayoutRoot" Background="White" Width="400">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="219*" />
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="70*" />
+        </Grid.RowDefinitions>
+        <Rectangle x:Name="captureRect" Width="350" Height="250" Stroke="Black" StrokeThickness="2" Grid.RowSpan="1" ></Rectangle>
+        <ComboBox x:Name="cboWebcams" DisplayMemberPath="FriendlyName" Grid.Row="1" Margin="2" Width="200"></ComboBox>
+        <Button Name="btDevices" Grid.Row="1" Width="94" HorizontalAlignment="Left" Click="btDevices_Click">Refresh devices</Button>
+        <Button x:Name="btCapture" Grid.Row="2" Width="100" HorizontalAlignment="Left" Click="btCapture_Click">Capture</Button>
+        <Button Name="btSnapshot" Grid.Row="2" Width="100" HorizontalAlignment="Right" Click="btSnapshot_Click">Snapshot</Button>
+        <StackPanel Name="stackImages" Orientation="Horizontal" Grid.Row="3" Background="Yellow"></StackPanel>
+    </Grid>
+</UserControl>

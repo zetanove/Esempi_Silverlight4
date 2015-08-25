@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="UserInterfaces.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Height="400" Width="600" Loaded="UserControl_Loaded" xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <toolkit:WrapPanel Grid.Row="0" Height="60" Orientation="Horizontal">
+            <Button x:Name="btFonts" Margin="2" Click="btFonts_Click">Fonts</Button>
+            <Button x:Name="btTextInput" Margin="2" Click="btTextInput_Click">Text Input</Button>
+            <Button x:Name="btPassword" Margin="2" Click="btPassword_Click">PasswordBox</Button>
+            <Button x:Name="btAutocompleteBox" Margin="2" Click="btAutocompleteBox_Click" Content="Autocomplete"></Button>
+            <Button x:Name="btButtons" Margin="2" Click="btButtons_Click" Content="Buttons"></Button>
+            <Button x:Name="btDrag" Margin="2" Click="btDrag_Click" Content="Drag Drop"></Button>
+            <Button x:Name="btItemsControl" Margin="2" Click="btItemsControl_Click" Content="Items control"></Button>
+            <Button x:Name="btDateControls" Margin="2" Click="btDateControls_Click"  Content="Date"></Button>
+            <Button x:Name="btRangeControls" Margin="2" Click="btRangeControls_Click"  Content="Range"></Button>
+            <Button x:Name="btTabControls" Margin="2" Click="btTabControls_Click"  Content="Tabcontrol"></Button>
+            <Button x:Name="btMessages" Margin="2" Content="Messages" Click="btMessages_Click" ></Button>
+            <Button x:Name="btFullscreen" Margin="2" Content="Fullscreen" Click="btFullscreen_Click" ></Button>
+            </toolkit:WrapPanel>
+        <Grid Name="theContainer" Grid.Row="1">
+            
+        </Grid>
+        
+    </Grid>
+</UserControl>

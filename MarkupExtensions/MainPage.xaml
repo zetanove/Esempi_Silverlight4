@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="MarkupExtensions.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Canvas x:Name="canvas" Background="White">
+        <TextBox Height="23" Name="txtLato" Width="120" Canvas.Left="10" Canvas.Top="10" Text="100"/>
+        <Rectangle Height="{Binding ElementName=txtLato, Path=Text}" Width="{Binding ElementName=txtLato, Path=Text}" HorizontalAlignment="Left" Name="rectangle1" Canvas.Left="10" Canvas.Top="40" Fill="Red" />
+        <Slider Name="slider1" Canvas.Left="150" Canvas.Top="10" Height="23"  Width="200"
+                Value="{Binding Mode=TwoWay, ElementName=txtLato, Path=Text}" Minimum="10" Maximum="500" />
+    </Canvas>
+</UserControl>

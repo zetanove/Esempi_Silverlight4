@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Shapes.LinesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400" Loaded="UserControl_Loaded">
+    
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+            <RowDefinition Height="50*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200*" />
+            <ColumnDefinition Width="180*" />
+        </Grid.ColumnDefinitions>
+        <Line StrokeThickness="20" Grid.Row="0" Grid.Column="0" X1="20" Y1="10" X2="180" Y2="40" Stroke="Blue" StrokeStartLineCap="Triangle" StrokeEndLineCap="Round"></Line>
+        <Line StrokeThickness="20" Grid.Row="1" Grid.Column="0" X1="20" Y1="10" X2="180" Y2="40" Stroke="Blue" StrokeStartLineCap="Square" StrokeEndLineCap="Flat"
+              StrokeDashArray="0.3 0.1" StrokeDashOffset="0.3"></Line>
+        <Polyline Stroke="Red" StrokeThickness="15" Points="10,10 30,40 100,15 150,35 200 20" Grid.Row="2"
+                  StrokeEndLineCap="Triangle" StrokeLineJoin="Round" ></Polyline>
+        <Polyline x:Name="polyline" Stroke="Red" StrokeThickness="1" Grid.Row="3" Grid.ColumnSpan="2" Grid.RowSpan="2"></Polyline>
+    </Grid>
+</UserControl>

@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="UserInterfaces.Buttons"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    
+    <Canvas x:Name="LayoutRoot" Background="White">
+        <RepeatButton Content="Repeat Button" Height="23" HorizontalAlignment="Left" Name="repeatButton" VerticalAlignment="Top" Click="repeatButton_Click" Canvas.Left="12" Canvas.Top="118" />
+        <TextBox Height="23" HorizontalAlignment="Left" Name="txtCount" VerticalAlignment="Top" Width="79" IsReadOnly="True" Text="0" Canvas.Left="104" Canvas.Top="118" />
+        <Button Canvas.Left="12" Canvas.Top="12" Height="23" Name="button1" Width="75" >
+            Click me
+        </Button>
+        <HyperlinkButton Canvas.Left="12" Canvas.Top="55" Content="www.silverlight.net" NavigateUri="http://www.silverlight.net" TargetName="_blank"/>
+        <HyperlinkButton Canvas.Left="140" Canvas.Top="50" Height="40" Name="hyperlinkButton3" NavigateUri="http://www.silverlight.net">
+            <Image Source="/UserInterfaces;component/Images/SilverlightLogo.png"></Image>
+        </HyperlinkButton>
+        <Button Canvas.Left="104" Canvas.Top="12" Name="button2" Width="75" >
+            <Image Source="/UserInterfaces;component/Images/SilverlightLogo.png"></Image>
+        </Button>
+        <CheckBox Canvas.Left="30" Canvas.Top="182" Content="Checked" Height="16" Name="checkBox1" IsChecked="True" IsThreeState="False" />
+        <CheckBox Canvas.Left="130" Canvas.Top="182" Content="Unchecked" Height="16" IsChecked="False" />
+        <CheckBox Canvas.Left="230" Canvas.Top="182" Content="Indeterminate" Height="16" Name="checkBox3" IsChecked="" IsThreeState="True" />
+        <RadioButton Canvas.Left="58" Canvas.Top="226" Content="Intel" Height="16" Name="radioButton1" IsChecked="True" GroupName="cpu" />
+        <RadioButton Canvas.Left="168" Canvas.Top="226" Content="AMD" Height="16" Name="radioButton2" GroupName="cpu" />
+        <RadioButton Canvas.Left="58" Canvas.Top="248" Content="1GB" Height="16" Name="radioButton3" IsChecked="False" GroupName="ram" />
+        <RadioButton Canvas.Left="168" Canvas.Top="248" Content="2GB" GroupName="ram" Height="16" IsChecked="True"/>
+        <RadioButton Canvas.Left="278" Canvas.Top="248" Content="4GB" GroupName="ram" Height="16" />
+        <TextBlock Canvas.Left="12" Canvas.Top="226" Height="23" Name="textBlock1" Text="CPU:" />
+        <TextBlock Canvas.Left="12" Canvas.Top="248" Height="23" Name="textBlock2" Text="RAM:" />
+    </Canvas>
+</UserControl>

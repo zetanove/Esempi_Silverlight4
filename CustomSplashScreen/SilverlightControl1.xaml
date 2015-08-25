@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="CustomSplashScreen.SilverlightControl1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    
+    <Grid x:Name="LayoutRoot">
+        <Grid.Background>
+            <ImageBrush ImageSource="/CustomSplashScreen;component/Images/bg.jpg" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="94*" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="125*" />
+        </Grid.RowDefinitions>
+        
+        <Rectangle Name="progressBg" Stroke="Yellow" StrokeThickness="2" Height="40" Width="400" Grid.Row="2"></Rectangle>
+        <Rectangle Name="progressBar" Height="38" Grid.Row="2" Width="300" HorizontalAlignment="Left">
+            <Rectangle.Fill>
+                <LinearGradientBrush>
+                    <GradientStop Color="White" Offset="0.5"></GradientStop>
+                    <GradientStop Color="Cyan" Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <TextBlock Name="txtProgress" Foreground="WhiteSmoke" FontSize="20" Text="0%" HorizontalAlignment="Center" Grid.Row="1"></TextBlock>
+    </Grid>
+</UserControl>

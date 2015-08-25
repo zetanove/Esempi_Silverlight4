@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Animations.KeyframesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    
+    <Canvas x:Name="LayoutRoot" Background="White">
+        <Canvas.Resources>
+            <Storyboard x:Name="sbFly" RepeatBehavior="Forever" AutoReverse="True">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="fly"
+                    Storyboard.TargetProperty="(Canvas.Top)">
+                    <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0"></LinearDoubleKeyFrame>
+                    <LinearDoubleKeyFrame KeyTime="0:0:3" Value="200"></LinearDoubleKeyFrame>
+                    <LinearDoubleKeyFrame KeyTime="0:0:6" Value="100"></LinearDoubleKeyFrame>
+                    <LinearDoubleKeyFrame KeyTime="0:0:9" Value="300"></LinearDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="fly"
+                    Storyboard.TargetProperty="(Canvas.Left)">
+                    <LinearDoubleKeyFrame KeyTime="0:0:0" Value="0"></LinearDoubleKeyFrame>
+                    <LinearDoubleKeyFrame KeyTime="0:0:3" Value="50"></LinearDoubleKeyFrame>
+                    <LinearDoubleKeyFrame KeyTime="0:0:6" Value="300"></LinearDoubleKeyFrame>
+                    <LinearDoubleKeyFrame KeyTime="0:0:9" Value="100"></LinearDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetName="flyRotation"
+                    Storyboard.TargetProperty="Angle">
+                    <DiscreteDoubleKeyFrame KeyTime="0:0:3" Value="90"></DiscreteDoubleKeyFrame>
+                    <DiscreteDoubleKeyFrame KeyTime="0:0:6" Value="200"></DiscreteDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+        </Canvas.Resources>
+        <Image Width="50" Height="50" Source="/Animations;component/Images/fly.png" x:Name="fly" MouseLeftButtonDown="fly_MouseLeftButtonDown">
+            <Image.RenderTransform>
+                <RotateTransform x:Name="flyRotation" Angle="135" CenterX="25" CenterY="25"></RotateTransform>
+            </Image.RenderTransform>
+        </Image>
+    </Canvas>
+</UserControl>

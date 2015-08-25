@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="UserInterfaces.TextInput"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    
+    <StackPanel>
+        <TextBox x:Name="textBox1" MaxLength="20" VerticalAlignment="Top" TextAlignment="Left" Margin="20,10,10,0" AcceptsReturn="False" Text="hello world superiore a venti caratteri" TextChanged="textBox1_TextChanged" >
+        </TextBox>
+        <TextBlock Text="Read only text box:" Margin="20 10 10 0"></TextBlock>
+        <TextBox Name="txtReadOnly" IsReadOnly="True" Margin="20 0 10 10"></TextBox>
+        <TextBox Height="100" Margin="20 10 10 10" Name="txtMultiline" TextWrapping="Wrap" AcceptsReturn="True" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="20,0,0,0" Name="cboScrollBar" VerticalAlignment="Top" Width="120" SelectionChanged="cboScrollBar_SelectionChanged" />
+        <Button Name="btCopy" Margin="20 5 20 5" Click="btCopy_Click">Copia negli appunti</Button>
+        <Button Name="btPaste" Margin="20 0 20 0" Click="btPaste_Click">Incolla dagli appunti</Button>
+    </StackPanel>
+</UserControl>

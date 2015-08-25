@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetProdotti">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetProdottiResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProdottiResult" type="tns:ArrayOfProdotto" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProdotto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Prodotto" nillable="true" type="tns:Prodotto" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Prodotto">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Nome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NomeCategoria" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetProdottiSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProdotti" />
+  </wsdl:message>
+  <wsdl:message name="GetProdottiSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProdottiResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ProdottiServiceSoap">
+    <wsdl:operation name="GetProdotti">
+      <wsdl:input message="tns:GetProdottiSoapIn" />
+      <wsdl:output message="tns:GetProdottiSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ProdottiServiceSoap" type="tns:ProdottiServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProdotti">
+      <soap:operation soapAction="http://tempuri.org/GetProdotti" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ProdottiServiceSoap12" type="tns:ProdottiServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProdotti">
+      <soap12:operation soapAction="http://tempuri.org/GetProdotti" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProdottiService">
+    <wsdl:port name="ProdottiServiceSoap" binding="tns:ProdottiServiceSoap">
+      <soap:address location="http://localhost:6053/ProdottiService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ProdottiServiceSoap12" binding="tns:ProdottiServiceSoap12">
+      <soap12:address location="http://localhost:6053/ProdottiService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

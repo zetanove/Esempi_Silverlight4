@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="LayoutContainers.WrapPanelPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controlsToolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Toolkit"
+    mc:Ignorable="d"
+    Height="300" Width="400">
+    <controlsToolkit:WrapPanel Name="wrapPanel1" Orientation="Horizontal">
+        <Button Width="120" Height="50">Button 1</Button>
+        <Button Width="120" Height="50">Button 2</Button>
+        <Button Width="120" Height="50">Button 3</Button>
+        <Button Width="120" Height="50">Button 4</Button>
+        <Button Width="120" Height="50">Button 5</Button>
+    </controlsToolkit:WrapPanel>
+</UserControl>

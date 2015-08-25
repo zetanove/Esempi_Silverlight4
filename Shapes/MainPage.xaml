@@ -1,0 +1,31 @@
+﻿<UserControl xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"  x:Class="Shapes.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="600">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="61" />
+            <RowDefinition Height="239*" />
+        </Grid.RowDefinitions>
+        <toolkit:WrapPanel Orientation="Horizontal" Margin="0,0,0,6">
+            <Button x:Name="btBrushes" Margin="2" Click="btBrushes_Click">Brush</Button>
+            <Button x:Name="btLines" Margin="2" Click="btLines_Click">Linee</Button>
+            <Button x:Name="btRectEllips" Margin="2" Click="btRectEllips_Click">Rettangoli/Ellissi</Button>
+            <Button x:Name="btPolygon" Margin="2" Click="btPolygon_Click">Poligono</Button>
+            <Button x:Name="btGeometry" Margin="2" Click="btGeometry_Click">Geometry</Button>
+            <Button x:Name="btImageclip" Margin="2" Click="btImageclip_Click">Clipping</Button>
+            <Button x:Name="btSegments" Margin="2" Click="btSegments_Click">Curves/Segments</Button>
+            <Button x:Name="btPathMarkup" Margin="2" Click="btPathMarkup_Click">Path markup</Button>
+            <Button x:Name="btTransform" Margin="2" Click="btTransform_Click">Transform</Button>
+            <Button x:Name="btReflections" Margin="2" Click="btReflections_Click">Reflections</Button>
+            <Button x:Name="btPerspective" Margin="2" Click="btPerspective_Click">3d perspective</Button>
+        </toolkit:WrapPanel>
+        <Grid Name="theContainer" Grid.Row="1">
+
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="XAMLProperties.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White" >
+        <Button Margin="84,73,68,177" Background="Red">
+            <Button.Content><!--inserisco un rettangolo rosso-->
+                <Rectangle Width="100" Height="30" Fill="Red">
+                </Rectangle>
+
+            </Button.Content>
+        </Button>
+        <Button Margin="84,191,68,59">
+            <Button.Content>
+            <Rectangle Height="30" Width="100">
+                <Rectangle.Fill>
+                    <LinearGradientBrush>
+                        <GradientStop Color="Red" Offset="0" />
+                        <GradientStop Color="Black" Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            </Button.Content>
+        </Button>
+        <Button Content="OK" FontSize="12" Foreground="Blue" Height="23" HorizontalAlignment="Left" Margin="166,29,0,0" Name="button1" VerticalAlignment="Top" Width="75" />
+    </Grid>
+</UserControl>

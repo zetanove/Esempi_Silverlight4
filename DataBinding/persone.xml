@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Persone>
+	<Persona Nome="Mario" Cognome="Bianchi"
+	DataNascita="1943-01-02"/>
+	<Persona Nome="Franco" Cognome="Rossi"
+	DataNascita="1959-05-01"/>
+</Persone>

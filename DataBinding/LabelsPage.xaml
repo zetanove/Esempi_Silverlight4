@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="DataBinding.LabelsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:my="clr-namespace:DataBinding"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <Grid x:Name="LayoutRoot" Background="White" Loaded="LayoutRoot_Loaded" BindingValidationError="LayoutRoot_BindingValidationError">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120" />
+            <ColumnDefinition Width="280" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="270*" />
+        </Grid.RowDefinitions>
+        <sdk:Label Target="{Binding ElementName=txtNome}"></sdk:Label>
+        <sdk:Label Grid.Row="1"  Target="{Binding ElementName=txtCognome}"></sdk:Label>
+        <sdk:Label Grid.Row="2"  Target="{Binding ElementName=dpNascita}"></sdk:Label>
+        <TextBox Name="txtNome" Margin="2" Width="150" HorizontalAlignment="Left" Grid.Column="1" Text="{Binding Nome,Mode=TwoWay, ValidatesOnExceptions=True, NotifyOnValidationError=True}"></TextBox>
+        <TextBox Name="txtCognome" Margin="2" Width="150" HorizontalAlignment="Left" Grid.Row="1" Grid.Column="1" Text="{Binding Cognome, Mode=TwoWay,ValidatesOnExceptions=True}"></TextBox>
+        <sdk:DatePicker Name="dpNascita" Grid.Row="2" Grid.Column="1" Height="23" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" SelectedDate="{Binding Mode=TwoWay, ValidatesOnExceptions=True, Path=DataNascita, TargetNullValue='1900-1-1'}" />
+        <Button Grid.Row="3" Grid.Column="1" Width="100">Salva</Button>
+    </Grid>
+</UserControl>

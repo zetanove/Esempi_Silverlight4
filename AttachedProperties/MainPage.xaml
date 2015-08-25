@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="AttachedProperties.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Canvas x:Name="pannello">
+        <Button Name="bt1" Canvas.Left="20" Canvas.Top="20" Width="100" Height="30" Click="bt1_Click">
+            Button1
+        </Button>
+        <Button Name="bt2" Canvas.Left="20" Canvas.Top="60" Width="100" Height="30" Click="Button_Click">
+            Button2
+        </Button>
+    </Canvas>
+</UserControl>

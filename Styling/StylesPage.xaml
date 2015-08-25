@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="Styling.StylesPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="Blue"></Setter>
+            <Setter Property="Margin" Value="5"></Setter>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Black" ShadowDepth="5"></DropShadowEffect>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style TargetType="TextBox" x:Key="TextBoxBlue">
+            <Setter Property="FontSize" Value="18"></Setter>
+            <Setter Property="Foreground" Value="Blue"></Setter>
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0 0" EndPoint="0 1">
+                        <GradientStop Offset="0" Color="Red"></GradientStop>
+                        <GradientStop Offset="0.1" Color="Yellow"></GradientStop>
+                        <GradientStop Offset="0.85" Color="Yellow"></GradientStop>
+                        <GradientStop Offset="1" Color="Green"></GradientStop>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+        <Style TargetType="TextBox" x:Key="TextBoxBlueRight" 
+               BasedOn="{StaticResource TextBoxBlue}">
+            <Setter Property="TextAlignment" Value="Right"></Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid x:Name="LayoutRoot" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="39*" />
+            <RowDefinition Height="39*" />
+            <RowDefinition Height="39*" />
+            <RowDefinition Height="38*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="105*" />
+        </Grid.RowDefinitions>
+        <TextBox Name="txt1" Width="150" Height="30" Style="{StaticResource TextBoxBlue}" Text="testo 1" Margin="20,4,20,4"></TextBox>
+        <TextBox Height="30" Width="150" Style="{StaticResource TextBoxBlueRight}" Text="testo 2" Margin="20,4,20,4" Grid.Row="1"></TextBox>
+        <Button Grid.Row="2" Width="100"  Margin="5,5,222,5">Click Me</Button>
+        <Button Grid.Row="4" Width="100" Margin="5,5,222,5" Click="Button_Click">Click Me 2</Button>
+        <Button Grid.Row="3" Width="100" Margin="5,5,222,5" Style="{x:Null}">no style button</Button>
+    </Grid>
+</UserControl>

@@ -1,0 +1,15 @@
+﻿<asx version="3.0">
+    <TITLE>Video Playlist</TITLE>
+        <ENTRY>
+            <TITLE>Video 1</TITLE>
+            <AUTHOR>Antonio </AUTHOR>
+        	<COPYRIGHT>(c)2010</COPYRIGHT>
+            <REF href="Video.wmv" />
+        </ENTRY>
+        <ENTRY>
+            <TITLE>AC/DC</TITLE>
+            <AUTHOR>ACDC </AUTHOR>
+        	<COPYRIGHT>(c)2003 acdc</COPYRIGHT>
+            <REF href="Video2.wmv" />
+        </ENTRY>
+</asx>
